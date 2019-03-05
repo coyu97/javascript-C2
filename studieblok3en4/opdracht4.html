@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-image: linear-gradient(#e66465, #9198e5);
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black; /*de opmaak van de div*/
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div>div1</div>
+    <!-- hier staan alle divs -->
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+
+    <script>
+      function onClick(event) {
+        if (event.shiftKey) event.target.classList.remove("bold");
+        // zodra shift en click word gebruikt geen bold
+        else event.target.classList.add("bold"); // zodra er alleen geclikt word bold
+      }
+
+      var divs = document.querySelectorAll("div"); // hier krijg je een lijst van div elementen
+      for (
+        var i = 0;
+        i < divs.length;
+        i++ // hier loop je door elke element van de array
+      )
+        divs[i].addEventListener("click", onClick); // voor elk div luister je naar de click event, en roep je de onclick funtie
+    </script>
+  </body>
+</html>

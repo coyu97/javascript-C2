@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <input type="number" ; id="setTime" ; value="0" />
+    <button id="submit">Submit</button>
+
+    <script>
+      var res = document.getElementById("setTime");
+
+      function timeclocker() {
+        setTimeout(function() {
+          alert("de tijd is om!");
+        }, res.value * 1000);
+      }
+
+      document.getElementById("submit").addEventListener("click", timeclocker);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+  <body>
+    <div
+      id="demo"
+      onmouseover="schuinTekst()"
+      onmouseout="normaalTekst()"
+      onclick="translateTekst(this)"
+      class="div"
+    >
+      <p>Hello World!</p>
+    </div>
+
+    <style>
+      .div {
+        background-color: black;
+        color: red;
+        font-family: Arial; /** hier is de opmaak van de div**/
+        height: 20px;
+      }
+    </style>
+
+    <script>
+      function schuinTekst() {
+        document.getElementById("demo").style.fontStyle = "italic";
+      }
+
+      function normaalTekst() {
+        document.getElementById("demo").style.fontStyle = "normal";
+      }
+      function translateTekst() {
+        var klik = document.getElementById("demo");
+        if (klik.innerHTML.match("Hello World!")) {
+          document.getElementById("demo").innerHTML = "Hallo Wereld!";
+        } else klik.innerHTML = "Hello World!";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+  <body>
+    <p>Corne Nieswaag</p>
+    <style>
+      .details-content {
+        display: none;
+      } /*  laat de tekst nog nog niet zien */
+
+      .show {
+        display: block; /* hier plakt hij deze class eraan  */
+      }
+    </style>
+    <div class="details">
+      <button id="myButton" class="dropbutton" onclick="myFunction()">
+        Geef details weer
+      </button>
+      <div id="myDetails" class="details-content">
+        <p>20-08-1997</p>
+        <p>Stadskanaal</p>
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        //de if en else statement is voor het veranderen van de button en tekst
+        var klik = document.getElementById("myButton");
+        if (klik.innerHTML.match("Geef details weer")) {
+          document.getElementById("myButton").innerHTML = "Verberg details";
+        } else {
+          klik.innerHTML = "Geef details weer";
+        }
+
+        document.getElementById("myDetails").classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
