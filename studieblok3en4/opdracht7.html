@@ -21,9 +21,10 @@
     </div>
 
     <script>
+      // store the klik element instead of calling it each time in the myFunction
+      var klik = document.getElementById("myButton");
       function myFunction() {
         //de if en else statement is voor het veranderen van de button en tekst
-        var klik = document.getElementById("myButton");
         if (klik.innerHTML.match("Geef details weer")) {
           document.getElementById("myButton").innerHTML = "Verberg details";
         } else {
